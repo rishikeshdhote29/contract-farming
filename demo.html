@@ -4,65 +4,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mandi Crop Rates Dashboard</title>
+    <title>Farming Contracts</title>
     <link rel="stylesheet" href="demo.css">
 </head>
 
 <body>
     <header>
-        <h1>Mandi Crop Rates Dashboard</h1>
+        <h1>Farming Contracts</h1>
         <nav>
             <ul>
-                <li><a href="#summary">Summary</a></li>
-                <li><a href="#charts">Data Visualization</a></li>
-                <li><a href="#map">Interactive Map</a></li>
-                <li><a href="#prices">Price Table</a></li>
-                <li><a href="#insurance-loans">Insurance & Loans</a></li>
-                <li><a href="#help">Help</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="contracts.html">Contracts</a></li>
+                <li><a href="insurance.html">Crop Insurance</a></li>
+                <li><a href="loans.html">Get Loan</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
             </ul>
         </nav>
-        <input type="text" id="search" placeholder="Search for crops or market data...">
     </header>
-    <div class="container">
-        <section id="summary">
-            <h2>Summary</h2>
-            <p>Top Gainers and Losers, Market Highlights, and more...</p>
-        </section>
-        <section id="charts">
-            <h2>Data Visualization</h2>
-            <p>Graphs and charts for trends and price fluctuations...</p>
-        </section>
-        <section id="map">
-            <h2>Interactive Map</h2>
-            <p>State-wise or region-wise prices...</p>
-        </section>
-        <section id="prices">
-            <h2>Price Table</h2>
-            <p>Detailed prices for different crops...</p>
-        </section>
-        <section id="insurance-loans">
-            <h2>Crop Insurance & Loans</h2>
-            <p>Options for farmers to buy crop insurance and apply for loans...</p>
-            <div class="insurance-loan-options">
-                <div class="insurance">
-                    <h3>Buy Crop Insurance</h3>
-                    <p>Protect your crops against natural calamities...</p>
-                    <button>Buy Insurance</button>
+    <main>
+        <section id="contract-templates">
+            <h2>Contract Templates</h2>
+            <p>Select from pre-made templates for various types of farming contracts.</p>
+            <div class="template-options">
+                <div class="template">
+                    <h3>Crop Sharing Contract</h3>
+                    <button>View Template</button>
                 </div>
-                <div class="loan">
-                    <h3>Get a Loan</h3>
-                    <p>Apply for agricultural loans with low interest rates...</p>
-                    <button>Apply for Loan</button>
+                <div class="template">
+                    <h3>Livestock Raising Contract</h3>
+                    <button>View Template</button>
                 </div>
             </div>
         </section>
-        <section id="help">
-            <h2>Help</h2>
-            <p>FAQs or a guide on how to use the dashboard...</p>
+        <section id="form-builder">
+            <h2>Create a New Contract</h2>
+            <form>
+                <label for="farmer-name">Farmer Name:</label>
+                <input type="text" id="farmer-name" name="farmer-name" required>
+                <label for="buyer-name">Buyer Name:</label>
+                <input type="text" id="buyer-name" name="buyer-name" required>
+                <label for="crop-details">Crop Details:</label>
+                <textarea id="crop-details" name="crop-details" required></textarea>
+                <label for="terms">Terms and Conditions:</label>
+                <textarea id="terms" name="terms" required></textarea>
+                <button type="submit">Create Contract</button>
+            </form>
         </section>
-    </div>
+        <section id="e-signature">
+            <h2>E-Signature</h2>
+            <p>Electronically sign contracts for convenience and efficiency.</p>
+            <button>Sign Contract</button>
+        </section>
+        <section id="document-upload">
+            <h2>Upload Documents</h2>
+            <p>Upload and attach relevant documents, such as identification proofs or land records.</p>
+            <input type="file" id="document-upload" name="document-upload">
+        </section>
+        <section id="contract-management">
+            <h2>Contract Management</h2>
+            <p>Track active, pending, and completed contracts.</p>
+            <div class="contract-dashboard">
+                <div class="contract-status">
+                    <h3>Active Contracts</h3>
+                    <p>Track your ongoing contracts here...</p>
+                </div>
+                <div class="contract-status">
+                    <h3>Pending Contracts</h3>
+                    <p>View contracts that are awaiting approval...</p>
+                </div>
+                <div class="contract-status">
+                    <h3>Completed Contracts</h3>
+                    <p>Review your completed contracts here...</p>
+                </div>
+            </div>
+        </section>
+        <section id="price-calculator">
+            <h2>Price Calculator</h2>
+            <p>Estimate the price based on crop type, quantity, and current market rates.</p>
+            <button>Calculate Price</button>
+        </section>
+        <section id="contact-support">
+            <h2>Contact Support</h2>
+            <p>Get customer support for any queries or issues.</p>
+            <button>Contact Us</button>
+        </section>
+        <section id="faq">
+            <h2>FAQs</h2>
+            <p>Find answers to common questions about farming contracts.</p>
+        </section>
+    </main>
     <footer>
-        <p>&copy; 2025 Mandi Crop Rates Dashboard. All rights reserved.</p>
+        <p>&copy; 2025 Farming Contracts. All rights reserved.</p>
     </footer>
 </body>
 

@@ -1,37 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Farm Finance</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <link rel="stylesheet" href="/css/finance.css">
+    <style>
+        .nav-img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+    </style>
 </head>
-<body>
-    <header>
-        <h1>Farm Finance</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="insurance.html">Crop Insurance</a></li>
-                <li><a href="loans.html">Get Loan</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section id="insurance">
-            <h2>Compare and Buy Crop Insurance</h2>
+
+<body class="bg-gray-100">
+    <nav class="bg-green-600 text-white p-4 shadow-md flex justify-between items-center">
+        <h1 class="text-xl font-bold">AgriMarketplace</h1>
+        <ul class="flex space-x-6">
+            <li><a href="/public/index.html#home" class="hover:underline">Home</a></li>
+            <li><a href="/public/index.html#marketplace" class="hover:underline">Marketplace</a></li>
+            <li><a href="/public/index.html#contracts" class="hover:underline">Contracts</a></li>
+            <li><a href="/public/index.html#analytics" class="hover:underline">Analytics</a></li>
+            <li><a href="/public/index.html#dashboard" class="hover:underline">Dashboard</a></li>
+            <li><a href="/public/index.html#contact" class="hover:underline">Contact</a></li>
+            <li><a href="/pages/login.html" class="hover:underline">Login</a></li>
+            <li><a href="/pages/profile.html"><img class="nav-img" src="https://static.vecteezy.com/system/resources/previews/008/302/513/non_2x/eps10-blue-user-icon-or-logo-in-simple-flat-trendy-modern-style-isolated-on-white-background-free-vector.jpg" alt=""></a></li>
+        </ul>
+    </nav>
+
+    <main class="container mx-auto p-4">
+        <section id="insurance" class="bg-white p-6 rounded-lg shadow-md mb-6">
+            <h2 class="text-2xl font-bold mb-4">Compare and Buy Crop Insurance</h2>
             <p>Find the best crop insurance plans that suit your needs.</p>
-            <!-- Add insurance comparison and buying options here -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="insurance-option bg-gray-100 p-4 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold mb-2">Insurance Plan A</h3>
+                    <p>Coverage: Natural calamities, pests, diseases...</p>
+                    <button class="mt-4 px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 transition duration-300">Buy Now</button>
+                </div>
+                <div class="insurance-option bg-gray-100 p-4 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold mb-2">Insurance Plan B</h3>
+                    <p>Coverage: Drought, flood, fire...</p>
+                    <button class="mt-4 px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 transition duration-300">Buy Now</button>
+                </div>
+                <div class="insurance-option bg-gray-100 p-4 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold mb-2">Insurance Plan C</h3>
+                    <p>Coverage: Hailstorm, frost, heavy rain...</p>
+                    <button class="mt-4 px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 transition duration-300">Buy Now</button>
+                </div>
+            </div>
         </section>
-        <section id="loans">
-            <h2>Get a Loan</h2>
+
+        <section id="loans" class="bg-white p-6 rounded-lg shadow-md mb-6">
+            <h2 class="text-2xl font-bold mb-4">Get a Loan</h2>
             <p>Apply for a loan to support your farming activities.</p>
-            <!-- Add loan application options here -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="loan-option bg-gray-100 p-4 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold mb-2">Loan Option 1</h3>
+                    <p>Interest Rate: 5% per annum...</p>
+                    <button class="mt-4 px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 transition duration-300">Apply Now</button>
+                </div>
+                <div class="loan-option bg-gray-100 p-4 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold mb-2">Loan Option 2</h3>
+                    <p>Interest Rate: 4.5% per annum...</p>
+                    <button class="mt-4 px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 transition duration-300">Apply Now</button>
+                </div>
+                <div class="loan-option bg-gray-100 p-4 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold mb-2">Loan Option 3</h3>
+                    <p>Interest Rate: 6% per annum...</p>
+                    <button class="mt-4 px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 transition duration-300">Apply Now</button>
+                </div>
+            </div>
         </section>
     </main>
-    <footer>
-        <p>&copy; 2023 Farm Finance. All rights reserved.</p>
+
+    <footer class="bg-gray-800 text-white p-4 mt-10 text-center">
+        <p>&copy; 2025 Farm Finance. All rights reserved.</p>
     </footer>
 </body>
+
 </html>

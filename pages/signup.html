@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup - AgriMarketplace</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <style>
+        .nav-img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100">
+    <nav class="bg-green-600 text-white p-4 shadow-md flex justify-between items-center">
+        <h1 class="text-xl font-bold">AgriMarketplace</h1>
+        <ul class="flex space-x-6">
+            <li><a href="/public/index.html#home" class="hover:underline">Home</a></li>
+            <li><a href="/public/index.html#marketplace" class="hover:underline">Marketplace</a></li>
+            <li><a href="/public/index.html#contracts" class="hover:underline">Contracts</a></li>
+            <li><a href="/public/index.html#analytics" class="hover:underline">Analytics</a></li>
+            <li><a href="/public/index.html#dashboard" class="hover:underline">Dashboard</a></li>
+            <li><a href="/public/index.html#contact" class="hover:underline">Contact</a></li>
+            <li><a href="/pages/login.html" class="hover:underline">Login</a></li>
+            <li><a href="/pages/profile.html"><img class="nav-img" src="https://static.vecteezy.com/system/resources/previews/008/302/513/non_2x/eps10-blue-user-icon-or-logo-in-simple-flat-trendy-modern-style-isolated-on-white-background-free-vector.jpg" alt=""></a></li>
+        </ul>
+    </nav>
+
+    <section id="signup" class="max-w-lg mx-auto mt-10 p-6 bg-white shadow-md rounded-lg">
+        <h2 class="text-2xl font-bold mb-4">User Signup</h2>
+        <form action="/signup" method="post">
+            <label class="block mb-2">Full Name</label>
+            <input type="text" name="fullname" class="w-full p-2 border rounded mb-4" placeholder="Enter your full name" required>
+
+            <label class="block mb-2">Username</label>
+            <input type="text" name="username" class="w-full p-2 border rounded mb-4" placeholder="Enter your username" required>
+
+            <label class="block mb-2">Email</label>
+            <input type="email" name="email" class="w-full p-2 border rounded mb-4" placeholder="Enter your email" required>
+
+            <label class="block mb-2">Password</label>
+            <input type="password" name="password" class="w-full p-2 border rounded mb-4" placeholder="Enter your password" required>
+
+            <label class="block mb-2">User Type</label>
+            <select name="user-type" class="w-full p-2 border rounded mb-4" required>
+                <option value="" disabled selected>Select your user type</option>
+                <option value="farmer">Farmer</option>
+                <option value="buyer">Buyer</option>
+                <option value="insurance-agent">Insurance Agent</option>
+                <option value="loan-agent">Loan Agent</option>
+            </select>
+
+            <div class="flex justify-between">
+                <button type="submit" class="bg-green-600 text-white px-4 py-2 rounded">Signup</button>
+                <a href="/pages/login.html" class="bg-green-600 text-white px-4 py-2 rounded text-center">Login</a>
+            </div>
+        </form>
+    </section>
+
+    <footer class="bg-gray-800 text-white p-4 mt-10 text-center">
+        <p>&copy; 2025 AgriMarketplace. All Rights Reserved.</p>
+    </footer>
+</body>
+
+</html>

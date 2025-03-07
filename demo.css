@@ -1,10 +1,12 @@
+/* General Styles */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
+    background: linear-gradient(to right, #f8f9fa, #e9ecef);
     margin: 0;
     padding: 0;
 }
 
+/* Header Styles */
 header {
     background-color: #4CAF50;
     color: white;
@@ -15,33 +17,48 @@ header {
     z-index: 1000;
 }
 
-header nav ul {
+nav {
+    background: linear-gradient(to right, #38a169, #2f855a);
+    padding: 10px 0;
+    box-shadow: 0 4px 2px -2px gray;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
     list-style: none;
-    padding: 0;
     display: flex;
     justify-content: center;
     margin: 0;
+    padding: 0;
 }
 
-header nav ul li {
+nav ul li {
     margin: 0 15px;
 }
 
-header nav ul li a {
+nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
-header input[type="text"] {
-    margin-top: 10px;
-    padding: 5px;
-    width: 300px;
-    border: none;
-    border-radius: 5px;
+nav ul li a:hover {
+    color: #d4f1f4;
+    transform: scale(1.1);
 }
 
-.container {
+.nav-img {
+    margin: 0;
+    padding: 0;
+    height: 30px;
+    border-radius: 50%;
+}
+
+/* Main Content Styles */
+main {
     padding: 20px;
 }
 
@@ -51,38 +68,39 @@ section {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
 }
 
-section h2 {
-    color: #4CAF50;
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-
-.insurance-loan-options {
+.template-options,
+.contract-dashboard {
     display: flex;
     justify-content: space-between;
 }
 
-.insurance,
-.loan {
+.template,
+.contract-status {
     background-color: #e7f5e9;
     padding: 20px;
     border-radius: 8px;
-    width: 45%;
+    width: 30%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
-.insurance h3,
-.loan h3 {
+.template h3,
+.contract-status h3 {
     color: #4CAF50;
 }
 
@@ -93,8 +111,21 @@ button {
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: #2f855a;
+    transform: scale(1.05);
+}
+
+/* Footer Styles */
+footer {
+    background: linear-gradient(to right, #2d3748, #1a202c);
+    padding: 10px 0;
+    text-align: center;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
