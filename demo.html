@@ -4,121 +4,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Profile</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>AgriConnect - Contract Farming Marketplace</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+        }
+
+        .navbar {
+            background-color: #4CAF50;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin-left: 2rem;
+        }
+
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('farm-field.jpg');
+            background-size: cover;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            padding: 3rem;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 10px;
+            padding: 1rem;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        .footer {
+            background-color: #333;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+    </style>
 </head>
 
 <body>
-    <div class="container mx-auto p-4">
-        <h1 class="text-2xl font-bold mb-4">Profile Page</h1>
+    <nav class="navbar">
+        <div class="logo">AgriConnect</div>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#marketplace">Marketplace</a>
+            <a href="#contracts">Contracts</a>
+            <a href="#login">Login</a>
+        </div>
+    </nav>
 
-        <div class="bg-white p-6 rounded-lg shadow-lg">
-            <!-- Profile Picture -->
-            <div class="flex items-center mb-4">
-                <img src="https://via.placeholder.com/100" alt="Profile Picture" class="rounded-full w-24 h-24 mr-4">
-                <button class="bg-blue-500 text-white px-4 py-2 rounded">Upload Picture</button>
-            </div>
-
-            <!-- Personal Information -->
-            <h2 class="text-xl font-semibold mb-2">Personal Information</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-                <div>
-                    <label class="block text-gray-700">Name</label>
-                    <input type="text" class="w-full p-2 border rounded" placeholder="John Doe">
-                </div>
-                <div>
-                    <label class="block text-gray-700">Email</label>
-                    <input type="email" class="w-full p-2 border rounded" placeholder="john.doe@example.com">
-                </div>
-                <div>
-                    <label class="block text-gray-700">Phone Number</label>
-                    <input type="text" class="w-full p-2 border rounded" placeholder="+1234567890">
-                </div>
-                <div>
-                    <label class="block text-gray-700">Address</label>
-                    <input type="text" class="w-full p-2 border rounded" placeholder="123 Main St">
-                </div>
-            </div>
-
-            <!-- Additional Information (For Farmers) -->
-            <h2 class="text-xl font-semibold mb-2">Farm Information</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-                <div>
-                    <label class="block text-gray-700">Farm Name</label>
-                    <input type="text" class="w-full p-2 border rounded" placeholder="Doe Farms">
-                </div>
-                <div>
-                    <label class="block text-gray-700">Location</label>
-                    <input type="text" class="w-full p-2 border rounded" placeholder="Rural Area, State">
-                </div>
-                <div>
-                    <label class="block text-gray-700">Farm Size</label>
-                    <input type="text" class="w-full p-2 border rounded" placeholder="50 acres">
-                </div>
-                <div>
-                    <label class="block text-gray-700">Crops Grown</label>
-                    <input type="text" class="w-full p-2 border rounded" placeholder="Wheat, Corn, Soybeans">
-                </div>
-            </div>
-
-            <!-- Additional Information (For Buyers) -->
-            <h2 class="text-xl font-semibold mb-2">Business Information</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-                <div>
-                    <label class="block text-gray-700">Company Name</label>
-                    <input type="text" class="w-full p-2 border rounded" placeholder="Doe Trading Co.">
-                </div>
-                <div>
-                    <label class="block text-gray-700">Industry</label>
-                    <input type="text" class="w-full p-2 border rounded" placeholder="Agriculture">
-                </div>
-                <div>
-                    <label class="block text-gray-700">Location</label>
-                    <input type="text" class="w-full p-2 border rounded" placeholder="Urban Area, State">
-                </div>
-                <div>
-                    <label class="block text-gray-700">Business Size</label>
-                    <input type="text" class="w-full p-2 border rounded" placeholder="100 employees">
-                </div>
-            </div>
-
-            <!-- Contracts Overview -->
-            <h2 class="text-xl font-semibold mb-2">Contracts Overview</h2>
-            <div class="mb-4">
-                <!-- Summary of active, pending, and completed contracts -->
-                <p>Active Contracts: 3</p>
-                <p>Pending Contracts: 2</p>
-                <p>Completed Contracts: 5</p>
-            </div>
-
-            <!-- Account Settings -->
-            <h2 class="text-xl font-semibold mb-2">Account Settings</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-                <div>
-                    <label class="block text-gray-700">Change Password</label>
-                    <input type="password" class="w-full p-2 border rounded" placeholder="New Password">
-                </div>
-                <div>
-                    <label class="block text-gray-700">Confirm Password</label>
-                    <input type="password" class="w-full p-2 border rounded" placeholder="Confirm Password">
-                </div>
-                <div>
-                    <label class="block text-gray-700">Email Preferences</label>
-                    <select class="w-full p-2 border rounded">
-                        <option>Receive All Emails</option>
-                        <option>Receive Important Emails Only</option>
-                        <option>Do Not Receive Emails</option>
-                    </select>
-                </div>
-            </div>
-
-            <!-- Action Buttons -->
-            <div class="flex justify-end">
-                <button class="bg-blue-500 text-white px-4 py-2 rounded mr-2">Save Changes</button>
-                <button class="bg-red-500 text-white px-4 py-2 rounded">Logout</button>
-            </div>
+    <div class="hero">
+        <div class="hero-content">
+            <h1>Secure Contract Farming Marketplace</h1>
+            <p>Connect directly with farmers and buyers with assured agreements</p>
+            <button
+                style="margin-top: 1rem; padding: 0.8rem 2rem; background: #4CAF50; border: none; color: white; border-radius: 5px;">
+                Start Trading
+            </button>
         </div>
     </div>
+
+    <div class="product-grid">
+        <div class="product-card">
+            <img src="wheat.jpg" alt="Wheat" class="product-image">
+            <h3>Premium Wheat</h3>
+            <p>₹2100/quintal</p>
+            <button>View Contract</button>
+        </div>
+
+        <div class="product-card">
+            <img src="rice.jpg" alt="Rice" class="product-image">
+            <h3>Basmati Rice</h3>
+            <p>₹3500/quintal</p>
+            <button>View Contract</button>
+        </div>
+
+        <div class="product-card">
+            <img src="cotton.jpg" alt="Cotton" class="product-image">
+            <h3>Organic Cotton</h3>
+            <p>₹6500/quintal</p>
+            <button>View Contract</button>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>© 2023 AgriConnect. All rights reserved.</p>
+        <p>Contact: support@agriconnect.com | +91 9876543210</p>
+    </footer>
 </body>
 
 </html>

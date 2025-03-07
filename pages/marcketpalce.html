@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgriMarketplace - Contract Farming Marketplace</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <link rel="stylesheet" href="/css/marketplace.css">
+</head>
+
+<body class="bg-gray-100">
+    <nav class="bg-green-600 text-white p-4 shadow-md flex justify-between items-center">
+        <h1 class="text-xl font-bold">AgriMarketplace</h1>
+        <ul class="flex space-x-6">
+            <li><a href="/public/index.html#home" class="hover:underline">Home</a></li>
+            <li><a href="/public/index.html#marketplace" class="hover:underline">Marketplace</a></li>
+            <li><a href="/public/index.html#contracts" class="hover:underline">Contracts</a></li>
+            <li><a href="/public/index.html#analytics" class="hover:underline">Analytics</a></li>
+            <li><a href="/public/index.html#dashboard" class="hover:underline">Dashboard</a></li>
+            <li><a href="/public/index.html#contact" class="hover:underline">Contact</a></li>
+            <li><a href="/pages/login.html" class="hover:underline">Login</a></li>
+        </ul>
+    </nav>
+
+    <div class="hero bg-cover bg-center h-60 flex items-center justify-center text-white text-center" style="background-image: url('/media/images/farm-field.jpg');">
+        <div class="hero-content">
+            <h1 class="text-3xl font-bold">Secure Contract Farming Marketplace</h1>
+            <p class="mt-2">Connect directly with farmers and buyers with assured agreements</p>
+            <button class="mt-4 px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 transition duration-300">Start Trading</button>
+        </div>
+    </div>
+
+    <div class="product-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6">
+        <div class="product-card bg-white rounded-lg shadow-md p-4 hover:shadow-lg transition duration-300">
+            <img src="/media/images/wheat.jpg" alt="Wheat" class="product-image w-full h-48 object-cover rounded">
+            <h3 class="text-xl font-bold mt-4">Premium Wheat</h3>
+            <p class="text-gray-700 mt-2">₹2100/quintal</p>
+            <button class="mt-4 px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 transition duration-300">View Contract</button>
+        </div>
+
+        <div class="product-card bg-white rounded-lg shadow-md p-4 hover:shadow-lg transition duration-300">
+            <img src="/media/images/rice.jpg" alt="Rice" class="product-image w-full h-48 object-cover rounded">
+            <h3 class="text-xl font-bold mt-4">Basmati Rice</h3>
+            <p class="text-gray-700 mt-2">₹3500/quintal</p>
+            <button class="mt-4 px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 transition duration-300">View Contract</button>
+        </div>
+
+        <div class="product-card bg-white rounded-lg shadow-md p-4 hover:shadow-lg transition duration-300">
+            <img src="/media/images/cotton.jpg" alt="Cotton" class="product-image w-full h-48 object-cover rounded">
+            <h3 class="text-xl font-bold mt-4">Organic Cotton</h3>
+            <p class="text-gray-700 mt-2">₹6500/quintal</p>
+            <button class="mt-4 px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 transition duration-300">View Contract</button>
+        </div>
+
+        <!-- Additional Products -->
+        <div class="product-card bg-white rounded-lg shadow-md p-4 hover:shadow-lg transition duration-300">
+            <img src="/media/images/soybeans.jpg" alt="Soybeans" class="product-image w-full h-48 object-cover rounded">
+            <h3 class="text-xl font-bold mt-4">Organic Soybeans</h3>
+            <p class="text-gray-700 mt-2">₹3000/quintal</p>
+            <button class="mt-4 px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 transition duration-300">View Contract</button>
+        </div>
+
+        <div class="product-card bg-white rounded-lg shadow-md p-4 hover:shadow-lg transition duration-300">
+            <img src="/media/images/maize.jpg" alt="Maize" class="product-image w-full h-48 object-cover rounded">
+            <h3 class="text-xl font-bold mt-4">Hybrid Maize</h3>
+            <p class="text-gray-700 mt-2">₹1800/quintal</p>
+            <button class="mt-4 px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 transition duration-300">View Contract</button>
+        </div>
+
+        <div class="product-card bg-white rounded-lg shadow-md p-4 hover:shadow-lg transition duration-300">
+            <img src="/media/images/sugarcane.jpg" alt="Sugarcane" class="product-image w-full h-48 object-cover rounded">
+            <h3 class="text-xl font-bold mt-4">Fresh Sugarcane</h3>
+            <p class="text-gray-700 mt-2">₹1500/quintal</p>
+            <button class="mt-4 px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 transition duration-300">View Contract</button>
+        </div>
+    </div>
+
+    <footer class="bg-gray-800 text-white p-4 mt-10 text-center">
+        <p>&copy; 2025 AgriMarketplace. All Rights Reserved.</p>
+        <p>Contact: support@agrimarketplace.com | +91 9876543210</p>
+    </footer>
+</body>
+ 
+</html>
