@@ -4,6 +4,11 @@ body {
 
 nav {
     background: linear-gradient(to right, #38a169, #2f855a);
+}.nav-img {
+    margin: 0;
+    padding: 0;
+    height: 30px;
+    border-radius: 50%;
 }
 
 nav ul li a {
