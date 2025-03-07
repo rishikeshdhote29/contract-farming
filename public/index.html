@@ -1,30 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Farming</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>AgriMarketplace</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+<link rel="stylesheet" href="/css/index.css">
+
 </head>
-<body>
-    <header>
-        <h1>Contact Farming</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section id="home">
-            <h2>Welcome to Contact Farming</h2>
-            <p>Your partner in sustainable agriculture.</p>
-        </section>
-        <section id="about">
-            <h2>About Us</h2>
-            <p>We connect farmers with resources and support to help them succeed.</p>
-        </section>
-       
+
+<body class="bg-gray-100">
+    <nav class="bg-green-600 text-white p-4 shadow-md flex justify-between items-center">
+        <h1 class="text-xl font-bold">AgriMarketplace</h1>
+        <ul class="flex space-x-6">
+            <li><a href="#home" class="hover:underline">Home</a></li>
+            <li><a href="#marketplace" class="hover:underline">Marketplace</a></li>
+            <li><a href="#contracts" class="hover:underline">Contracts</a></li>
+            <li><a href="#analytics" class="hover:underline">Analytics</a></li>
+            <li><a href="#dashboard" class="hover:underline">Dashboard</a></li>
+            <li><a href="#contact" class="hover:underline">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="home" class="text-center p-10">
+        <h2 class="text-3xl font-bold">Welcome to AgriMarketplace</h2>
+        <p class="text-gray-700 mt-2">A platform for seamless crop trading and contract management.</p>
+        <img src="/media/images/indeximage.jpg" alt="Agriculture Image" class="mx-auto mt-4 rounded-lg shadow-md">
+    </section>
+
+    <section id="marketplace" class="max-w-4xl mx-auto p-6 bg-white shadow-md rounded-lg mt-6">
+        <h2 class="text-2xl font-bold mb-4">Marketplace</h2>
+        <p>Browse and bid on crops from trusted sellers.</p>
+        <img src="https://via.placeholder.com/600x400" alt="Marketplace Image" class="mx-auto mt-4 rounded-lg shadow-md">
+    </section>
+
+    <section id="contracts" class="max-w-4xl mx-auto p-6 bg-white shadow-md rounded-lg mt-6">
+        <h2 class="text-2xl font-bold mb-4">Contracts</h2>
+        <p>Manage your contracts with built-in templates and tracking features.</p>
+        <img src="https://via.placeholder.com/600x400" alt="Contracts Image" class="mx-auto mt-4 rounded-lg shadow-md">
+    </section>
+
+    <section id="analytics" class="max-w-4xl mx-auto p-6 bg-white shadow-md rounded-lg mt-6">
+        <h2 class="text-2xl font-bold mb-4">Analytics</h2>
+        <p>Gain market insights and track performance metrics.</p>
+        <img src="https://via.placeholder.com/600x400" alt="Analytics Image" class="mx-auto mt-4 rounded-lg shadow-md">
+    </section>
+
+    <section id="dashboard" class="max-w-4xl mx-auto p-6 bg-white shadow-md rounded-lg mt-6">
+        <h2 class="text-2xl font-bold mb-4">Dashboard</h2>
+        <p>Quick access to key features and user-specific information.</p>
+        <img src="https://via.placeholder.com/600x400" alt="Dashboard Image" class="mx-auto mt-4 rounded-lg shadow-md">
+    </section>
+
+    <section id="registration" class="max-w-lg mx-auto mt-10 p-6 bg-white shadow-md rounded-lg">
+        <h2 class="text-2xl font-bold mb-4">User Registration</h2>
+        <form>
+            <label class="block mb-2">Full Name</label>
+            <input type="text" class="w-full p-2 border rounded mb-4" placeholder="Enter your full name" required>
+
+            <label class="block mb-2">Email</label>
+            <input type="email" class="w-full p-2 border rounded mb-4" placeholder="Enter your email" required>
+
+            <label class="block mb-2">Password</label>
+            <input type="password" class="w-full p-2 border rounded mb-4" placeholder="Enter your password" required>
+
+            <button type="submit" class="bg-green-600 text-white px-4 py-2 rounded">Register</button>
+        </form>
+    </section>
+
+    <section id="login" class="max-w-lg mx-auto mt-10 p-6 bg-white shadow-md rounded-lg">
+        <h2 class="text-2xl font-bold mb-4">User Login</h2>
+        <form>
+            <label class="block mb-2">Email</label>
+            <input type="email" class="w-full p-2 border rounded mb-4" placeholder="Enter your email" required>
+
+            <label class="block mb-2">Password</label>
+            <input type="password" class="w-full p-2 border rounded mb-4" placeholder="Enter your password" required>
+
+            <button type="submit" class="bg-green-600 text-white px-4 py-2 rounded">Login</button>
+        </form>
+    </section>
+
+    <section id="contact" class="max-w-4xl mx-auto p-6 bg-white shadow-md rounded-lg mt-6">
+        <h2 class="text-2xl font-bold mb-4">Contact Us</h2>
+        <p>Email: support@agrimarketplace.com</p>
+        <p>Phone: +1234567890</p>
+        <img src="https://via.placeholder.com/600x400" alt="Contact Image" class="mx-auto mt-4 rounded-lg shadow-md">
+    </section>
+
+    <footer class="bg-gray-800 text-white p-4 mt-10 text-center">
+        <p>&copy; 2025 AgriMarketplace. All Rights Reserved.</p>
+    </footer>
+</body>
+
+</html>
