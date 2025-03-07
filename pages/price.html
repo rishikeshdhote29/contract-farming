@@ -9,7 +9,7 @@
     <script>
         async function fetchCropPrices() {
             const apiKey = "579b464db66ec23bdd00000101c67c938889443347e000b81542ec71";
-            const apiUrl = "https://api.data.gov.in/resource/9ef84268-d588-465a-a308-a864a43d0070?api-key=579b464db66ec23bdd00000101c67c938889443347e000b81542ec71 &format=json&offset=0&limit=10";
+            const apiUrl = "https://api.data.gov.in/resource/9ef84268-d588-465a-a308-a864a43d0070?api-key=${apiKey}&format=json&offset=0&limit=10";
 
             try {
                 const response = await fetch(apiUrl);
@@ -23,6 +23,8 @@
                     row.innerHTML = `
                         <td class="p-2 border">${crop.commodity}</td>
                         <td class="p-2 border">${crop.modal_price} per quintal</td>
+                        <td class="p-2 border">${crop.state}</td>
+                        <td class="p-2 border">${crop.arrival_date}</td>
                     `;
                     priceTableBody.appendChild(row);
                 });
@@ -46,11 +48,9 @@
             <li><a href="/public/index.html#dashboard" class="hover:underline">Dashboard</a></li>
             <li><a href="/public/index.html#contact" class="hover:underline">Contact</a></li>
             <li><a href="/pages/login.html" class="hover:underline">Login</a></li>
-                    <li><a href="/pages/profile.html"><img class="nav-img"
-                                src="https://static.vecteezy.com/system/resources/previews/008/302/513/non_2x/eps10-blue-user-icon-or-logo-in-simple-flat-trendy-modern-style-isolated-on-white-background-free-vector.jpg"
-                                alt=""></a></li>
-
-
+            <li><a href="/pages/profile.html"><img class="nav-img"
+                        src="https://static.vecteezy.com/system/resources/previews/008/302/513/non_2x/eps10-blue-user-icon-or-logo-in-simple-flat-trendy-modern-style-isolated-on-white-background-free-vector.jpg"
+                        alt=""></a></li>
         </ul>
     </nav>
 
@@ -66,6 +66,8 @@
                 <tr>
                     <th class="p-2 border">Crop Name</th>
                     <th class="p-2 border">Price</th>
+                    <th class="p-2 border">State</th>
+                    <th class="p-2 border">Date</th>
                 </tr>
             </thead>
             <tbody id="crop-prices-body" class="bg-gray-200"></tbody>
