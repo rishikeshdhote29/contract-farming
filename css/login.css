@@ -1,0 +1,48 @@
+body {
+    background: linear-gradient(to right, #f8f9fa, #e9ecef);
+}
+
+nav {
+    background: linear-gradient(to right, #38a169, #2f855a);
+}
+
+nav ul li a {
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #d4f1f4;
+}
+
+section#login {
+    animation: fadeIn 1s ease-in-out;
+    background: linear-gradient(to right, #ffffff, #f7fafc);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+input:focus {
+    border-color: #38a169;
+    box-shadow: 0 0 5px rgba(56, 161, 105, 0.5);
+}
+
+button:hover {
+    background-color: #2f855a;
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+footer {
+    background: linear-gradient(to right, #2d3748, #1a202c);
+}
