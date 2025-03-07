@@ -6,7 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AgriMarketplace - Crop Prices</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
-    <script>
+   
+   <style>
+    .nav-img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+    }
+   </style>
+   <script>
         async function fetchCropPrices() {
             const apiKey = "579b464db66ec23bdd00000101c67c938889443347e000b81542ec71";
             const apiUrl = "https://api.data.gov.in/resource/9ef84268-d588-465a-a308-a864a43d0070?api-key=${apiKey}&format=json&offset=0&limit=10";
