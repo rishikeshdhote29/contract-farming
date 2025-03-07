@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgriMarketplace - Crop Prices</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <script>
+        async function fetchCropPrices() {
+            const apiKey = "579b464db66ec23bdd00000101c67c938889443347e000b81542ec71";
+            const apiUrl = "https://api.data.gov.in/resource/9ef84268-d588-465a-a308-a864a43d0070?api-key=579b464db66ec23bdd00000101c67c938889443347e000b81542ec71 &format=json&offset=0&limit=10";
+
+            try {
+                const response = await fetch(apiUrl);
+                const data = await response.json();
+
+                const priceTableBody = document.getElementById("crop-prices-body");
+                priceTableBody.innerHTML = "";
+
+                data.records.forEach(crop => {
+                    const row = document.createElement("tr");
+                    row.innerHTML = `
+                        <td class="p-2 border">${crop.commodity}</td>
+                        <td class="p-2 border">${crop.modal_price} per quintal</td>
+                    `;
+                    priceTableBody.appendChild(row);
+                });
+            } catch (error) {
+                console.error("Error fetching crop prices:", error);
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", fetchCropPrices);
+    </script>
+</head>
+
+<body class="bg-gray-100">
+    <nav class="bg-green-600 text-white p-4 shadow-md flex justify-between items-center">
+        <h1 class="text-xl font-bold">AgriMarketplace</h1>
+        <ul class="flex space-x-6">
+            <li><a href="/public/index.html#home" class="hover:underline">Home</a></li>
+            <li><a href="/public/index.html#marketplace" class="hover:underline">Marketplace</a></li>
+            <li><a href="/public/index.html#contracts" class="hover:underline">Contracts</a></li>
+            <li><a href="/public/index.html#analytics" class="hover:underline">Analytics</a></li>
+            <li><a href="/public/index.html#dashboard" class="hover:underline">Dashboard</a></li>
+            <li><a href="/public/index.html#contact" class="hover:underline">Contact</a></li>
+            <li><a href="/pages/login.html" class="hover:underline">Login</a></li>
+            <li><a href="/pages/profile.html"><img class="nav-img" src="https://static.vecteezy.com/system/resources/previews/008/302/513/non_2x/eps10-blue-user-icon-or-logo-in-simple-flat-trendy-modern-style-isolated-on-white-background-free-vector.jpg"
+                        alt=""></a></li>
+
+        </ul>
+    </nav>
+
+    <section id="home" class="text-center p-10">
+        <h2 class="text-3xl font-bold">Welcome to AgriMarketplace</h2>
+        <p class="text-gray-700 mt-2">A platform for seamless crop trading and contract management.</p>
+    </section>
+
+    <section id="marketplace" class="max-w-4xl mx-auto p-6 bg-white shadow-md rounded-lg mt-6">
+        <h2 class="text-2xl font-bold mb-4">Real-Time Crop Prices</h2>
+        <table class="min-w-full bg-white mt-4">
+            <thead>
+                <tr>
+                    <th class="p-2 border">Crop Name</th>
+                    <th class="p-2 border">Price</th>
+                </tr>
+            </thead>
+            <tbody id="crop-prices-body" class="bg-gray-200"></tbody>
+        </table>
+    </section>
+
+    <section id="contracts" class="max-w-4xl mx-auto p-6 bg-white shadow-md rounded-lg mt-6">
+        <h2 class="text-2xl font-bold mb-4">Contracts</h2>
+        <p>Manage your contracts with built-in templates and tracking features.</p>
+    </section>
+
+    <section id="analytics" class="max-w-4xl mx-auto p-6 bg-white shadow-md rounded-lg mt-6">
+        <h2 class="text-2xl font-bold mb-4">Analytics</h2>
+        <p>Gain market insights and track performance metrics.</p>
+    </section>
+
+    <section id="registration" class="max-w-lg mx-auto mt-10 p-6 bg-white shadow-md rounded-lg">
+        <h2 class="text-2xl font-bold mb-4">User Registration</h2>
+        <form>
+            <label class="block mb-2">Full Name</label>
+            <input type="text" class="w-full p-2 border rounded mb-4" placeholder="Enter your full name" required>
+
+            <label class="block mb-2">Email</label>
+            <input type="email" class="w-full p-2 border rounded mb-4" placeholder="Enter your email" required>
+
+            <label class="block mb-2">Password</label>
+            <input type="password" class="w-full p-2 border rounded mb-4" placeholder="Enter your password" required>
+
+            <button type="submit" class="bg-green-600 text-white px-4 py-2 rounded">Register</button>
+        </form>
+    </section>
+
+    <section id="contact" class="max-w-4xl mx-auto p-6 bg-white shadow-md rounded-lg mt-6">
+        <h2 class="text-2xl font-bold mb-4">Contact Us</h2>
+        <p>Email: support@agrimarketplace.com</p>
+        <p>Phone: +1234567890</p>
+    </section>
+
+    <footer class="bg-gray-800 text-white p-4 mt-10 text-center">
+        <p>&copy; 2025 AgriMarketplace. All Rights Reserved.</p>
+    </footer>
+</body>
+
+</html>
