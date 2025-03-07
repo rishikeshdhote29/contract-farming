@@ -4,138 +4,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AgriConnect - Contract Farming Marketplace</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Arial', sans-serif;
-        }
-
-        body {
-            background-color: #f5f5f5;
-        }
-
-        .navbar {
-            background-color: #4CAF50;
-            padding: 1rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            color: white;
-            font-size: 1.5rem;
-            font-weight: bold;
-        }
-
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            margin-left: 2rem;
-        }
-
-        .hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('farm-field.jpg');
-            background-size: cover;
-            height: 60vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            text-align: center;
-        }
-
-        .hero-content h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-
-        .product-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            padding: 3rem;
-        }
-
-        .product-card {
-            background: white;
-            border-radius: 10px;
-            padding: 1rem;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-        }
-
-        .product-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .product-image {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 5px;
-        }
-
-        .footer {
-            background-color: #333;
-            color: white;
-            padding: 2rem;
-            text-align: center;
-        }
-    </style>
+    <title>Mandi Crop Rates Dashboard</title>
+    <link rel="stylesheet" href="demo.css">
 </head>
 
 <body>
-    <nav class="navbar">
-        <div class="logo">AgriConnect</div>
-        <div class="nav-links">
-            <a href="#home">Home</a>
-            <a href="#marketplace">Marketplace</a>
-            <a href="#contracts">Contracts</a>
-            <a href="#login">Login</a>
-        </div>
-    </nav>
-
-    <div class="hero">
-        <div class="hero-content">
-            <h1>Secure Contract Farming Marketplace</h1>
-            <p>Connect directly with farmers and buyers with assured agreements</p>
-            <button
-                style="margin-top: 1rem; padding: 0.8rem 2rem; background: #4CAF50; border: none; color: white; border-radius: 5px;">
-                Start Trading
-            </button>
-        </div>
+    <header>
+        <h1>Mandi Crop Rates Dashboard</h1>
+        <nav>
+            <ul>
+                <li><a href="#summary">Summary</a></li>
+                <li><a href="#charts">Data Visualization</a></li>
+                <li><a href="#map">Interactive Map</a></li>
+                <li><a href="#prices">Price Table</a></li>
+                <li><a href="#insurance-loans">Insurance & Loans</a></li>
+                <li><a href="#help">Help</a></li>
+            </ul>
+        </nav>
+        <input type="text" id="search" placeholder="Search for crops or market data...">
+    </header>
+    <div class="container">
+        <section id="summary">
+            <h2>Summary</h2>
+            <p>Top Gainers and Losers, Market Highlights, and more...</p>
+        </section>
+        <section id="charts">
+            <h2>Data Visualization</h2>
+            <p>Graphs and charts for trends and price fluctuations...</p>
+        </section>
+        <section id="map">
+            <h2>Interactive Map</h2>
+            <p>State-wise or region-wise prices...</p>
+        </section>
+        <section id="prices">
+            <h2>Price Table</h2>
+            <p>Detailed prices for different crops...</p>
+        </section>
+        <section id="insurance-loans">
+            <h2>Crop Insurance & Loans</h2>
+            <p>Options for farmers to buy crop insurance and apply for loans...</p>
+            <div class="insurance-loan-options">
+                <div class="insurance">
+                    <h3>Buy Crop Insurance</h3>
+                    <p>Protect your crops against natural calamities...</p>
+                    <button>Buy Insurance</button>
+                </div>
+                <div class="loan">
+                    <h3>Get a Loan</h3>
+                    <p>Apply for agricultural loans with low interest rates...</p>
+                    <button>Apply for Loan</button>
+                </div>
+            </div>
+        </section>
+        <section id="help">
+            <h2>Help</h2>
+            <p>FAQs or a guide on how to use the dashboard...</p>
+        </section>
     </div>
-
-    <div class="product-grid">
-        <div class="product-card">
-            <img src="wheat.jpg" alt="Wheat" class="product-image">
-            <h3>Premium Wheat</h3>
-            <p>₹2100/quintal</p>
-            <button>View Contract</button>
-        </div>
-
-        <div class="product-card">
-            <img src="rice.jpg" alt="Rice" class="product-image">
-            <h3>Basmati Rice</h3>
-            <p>₹3500/quintal</p>
-            <button>View Contract</button>
-        </div>
-
-        <div class="product-card">
-            <img src="cotton.jpg" alt="Cotton" class="product-image">
-            <h3>Organic Cotton</h3>
-            <p>₹6500/quintal</p>
-            <button>View Contract</button>
-        </div>
-    </div>
-
-    <footer class="footer">
-        <p>© 2023 AgriConnect. All rights reserved.</p>
-        <p>Contact: support@agriconnect.com | +91 9876543210</p>
+    <footer>
+        <p>&copy; 2025 Mandi Crop Rates Dashboard. All rights reserved.</p>
     </footer>
 </body>
 
