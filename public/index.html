@@ -6,8 +6,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AgriMarketplace</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
-<link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/index.css">
+    <style>
+        .nav-img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
 
+        .video-background {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .video-background video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+        }
+
+        .video-content {
+            position: relative;
+            z-index: 1;
+            color: white;
+            text-align: center;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .video-content h2 {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+
+        .video-content p {
+            font-size: 1.5rem;
+            margin-top: 1rem;
+        }
+    </style>
 </head>
 
 <body class="bg-gray-100">
@@ -21,19 +64,23 @@
             <li><a href="/pages/finance.html" class="li-dec">Finance</a></li>
             <li><a href="/pages/CONTACT.html" class="li-dec">Contact</a></li>
             <li><a href="/pages/login.html" class="li-dec">Login</a></li>
-           
-            <li><a href="/pages/profile.html" ><img class="nav-img" src="https://static.vecteezy.com/system/resources/previews/008/302/513/non_2x/eps10-blue-user-icon-or-logo-in-simple-flat-trendy-modern-style-isolated-on-white-background-free-vector.jpg" alt=""></a></li>
-
+            <li><a href="/pages/profile.html"><img class="nav-img"
+                        src="https://static.vecteezy.com/system/resources/previews/008/302/513/non_2x/eps10-blue-user-icon-or-logo-in-simple-flat-trendy-modern-style-isolated-on-white-background-free-vector.jpg"
+                        alt=""></a></li>
         </ul>
     </nav>
 
-    <section id="home" class="text-center p-10">
-        <h2 class="text-3xl font-bold">Welcome to AgriMarketplace</h2>
-        <p class="text-gray-700 mt-2">A platform for seamless crop trading and contract management.</p>
-        <img src="https://www.visualsstock.com/images/Low/5/AK61916.jpg" alt="Agriculture Image" class="mx-auto mt-4 rounded-lg shadow-md width">
-    </section>
+    <div class="video-background">
+        <video autoplay muted loop>
+            <source src="/public/videos/partbg.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="video-content">
+            <h2>Welcome to AgriMarketplace</h2>
+            <p>A platform for seamless crop trading and contract management.</p>
+        </div>
+    </div>
 
-   
 
     <footer class="bg-gray-800 text-white p-4 mt-10 text-center">
         <p>&copy; 2025 AgriMarketplace. All Rights Reserved.</p>
