@@ -1,31 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
+    <title>Contact Us - AgriMarketplace</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .nav-img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+    </style>
 </head>
-<body>
+
+<body class="bg-gray-100">
+    <nav class="bg-green-600 text-white p-4 shadow-md flex justify-between items-center">
+        <h1 class="text-xl font-bold">AgriMarketplace</h1>
+        <ul class="flex space-x-6">
+            <li><a href="/public/index.html" class="li-dec">Home</a></li>
+            <li><a href="/pages/marcketpalce.html" class="li-dec">Marketplace</a></li>
+            <li><a href="/pages/contract.html" class="li-dec">Contracts</a></li>
+            <li><a href="/pages/price.html" class="li-dec">Analytics</a></li>
+            <li><a href="/pages/finance.html" class="li-dec">Finance</a></li>
+            <li><a href="/pages/CONTACT.html" class="li-dec">Contact</a></li>
+            <li><a href="/pages/login.html" class="li-dec">Login</a></li>
+    
+            <li><a href="/pages/profile.html"><img class="nav-img"
+                        src="https://static.vecteezy.com/system/resources/previews/008/302/513/non_2x/eps10-blue-user-icon-or-logo-in-simple-flat-trendy-modern-style-isolated-on-white-background-free-vector.jpg"
+                        alt=""></a></li>
+    
+        </ul>
+    </nav>
+
     <header>
-        <h1>Contact Us</h1>
+        <h1 align="center" class="text-2xl font-bold">Contact Us</h1>
     </header>
-    <main>
-        <form action="/submit-form" method="post">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
+
+    <main class="flex justify-center items-center p-6">
+        <form action="/submit-form" method="post" class="bg-white p-6 rounded-lg shadow-md w-full max-w-lg">
+            <label for="name" class="block mb-2 font-bold">Name:</label>
+            <input type="text" id="name" name="name" class="w-full p-2 border rounded mb-4" required>
             
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+            <label for="email" class="block mb-2 font-bold">Email:</label>
+            <input type="email" id="email" name="email" class="w-full p-2 border rounded mb-4" required>
             
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
+            <label for="message" class="block mb-2 font-bold">Message:</label>
+            <textarea id="message" name="message" rows="4" class="w-full p-2 border rounded mb-4" required></textarea>
             
-            <button type="submit">Submit</button>
+            <button type="submit" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition duration-300">Submit</button>
         </form>
     </main>
-    <footer>
-        <p>&copy; 2023 Your Company Name. All rights reserved.</p>
+
+    <footer class="bg-gray-800 text-white p-4 text-center">
+        <p>&copy; 2025 AgriMarketplace. All rights reserved.</p>
     </footer>
 </body>
+
 </html>
