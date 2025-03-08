@@ -4,6 +4,18 @@ body {
     animation: fadeIn 1s ease-in-out;
 }
 
+.li-dec:hover{
+    margin: 4px;
+    padding: 4px;
+    background-color: #38a169;
+    font-weight: bold;
+    color: #1a202c;
+    text-shadow: 1px 1px 2px orange;
+    border-radius: 10%;
+    box-shadow: 5px 5px 2px rgb(8, 126, 96);
+}
+
+
 @keyframes fadeIn {
     from {
         opacity: 0;
